@@ -4,7 +4,7 @@ class EventController < ApplicationController
   def new
     event = Event.create(event_params)
 
-    render json: { name: event.name }
+    render json: { name: event.name, uuid: event.uuid }
   end
 
   private
